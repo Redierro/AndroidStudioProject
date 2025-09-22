@@ -50,7 +50,5 @@ public class MainActivity extends AppCompatActivity {
                 tv.setBackgroundColor(Color.parseColor("#FFF59D")); // šviesiai geltona
             }
         });
-
-        // KOMENTARAS REVERTINIMUI!!!
     }
 }
