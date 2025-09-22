@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = findViewById(R.id.textViewHello);
         Button btnChangeText = findViewById(R.id.buttonChangeText);
         Button btnChangeColor = (Button) findViewById(R.id.buttonChangeColor);
+        Button btnChangeBackground = (Button) findViewById(R.id.buttonChangeBackground);
 
         btnChangeText.setOnClickListener(v -> {
             tv.setText("Testavimas! MIPT Praktika testas!");
@@ -39,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tv.setTextColor(Color.parseColor("#D32F2F")); // raudona
+            }
+        });
+
+        // Pakeicia teksto fona
+        btnChangeBackground.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setBackgroundColor(Color.parseColor("#FFF59D")); // šviesiai geltona
             }
         });
     }
