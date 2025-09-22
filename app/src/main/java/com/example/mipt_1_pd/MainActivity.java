@@ -1,6 +1,8 @@
 package com.example.mipt_1_pd;
 
 import android.os.Bundle;
+import android.graphics.Color;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -9,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,12 +25,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Kodas kuris pakeicia teksta
+        // Pakeicia teksta pati
         TextView tv = findViewById(R.id.textViewHello);
         Button btnChangeText = findViewById(R.id.buttonChangeText);
+        Button btnChangeColor = (Button) findViewById(R.id.buttonChangeColor);
 
         btnChangeText.setOnClickListener(v -> {
             tv.setText("Testavimas! MIPT Praktika testas!");
+        });
+
+        // Pakeicia teksto spalva
+        btnChangeColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setTextColor(Color.parseColor("#D32F2F")); // raudona
+            }
         });
     }
 }
